@@ -50,7 +50,7 @@ const displayProductItems = items => {
                       <div class="product__price">
                         <h4>$${product.price}</h4>
                       </div>
-                      <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
+                        <button type="submit" class="product__btn">Add To Cart</button>
                     </div>
                   <ul>
                       <li>
@@ -201,3 +201,5 @@ if (detail) {
     }
   });
 }
+
+
