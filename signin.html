@@ -1,0 +1,242 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>signup</title>
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<style>
+    /* Internal CSS added for the styling of the Signup form */
+    html,body{
+      height: 100%;
+      width: 100%;
+    }
+    .input-container p{
+      color:#fff;
+      width: 100%;
+      text-align: center;
+      font-size: xx-large;
+      font-weight: bold;
+    }
+    .signup-body{
+        background-image: url(./images/Colour6.jpg);
+        height: 100%;
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+    }
+    .signup{
+        background-color: rgba(0,0,0,0.3);
+        width: 35%;
+        height: 85%;
+        margin-left: 35%;
+        margin-top: 6%;
+        margin-bottom: 10%;
+        bottom: 20%;
+        padding: 5% 2%;
+        border-radius: 5%;
+        border: 2px solid rgb(256, 256, 256,0.3);    
+    }
+    .icon{
+        padding-top: 3%;
+        width: 20%;
+        background: #0ddfb1;
+        color: white;
+        text-align: center;
+        border-bottom-left-radius:  10px;
+        border-top-left-radius: 10px;
+        border-bottom: 5px solid #0ddfb1;
+    }
+    .avtar{
+        width: 30%;
+        height: 40%;
+        margin-left: 36%;
+        margin-top: -34%;
+        
+    }
+    .input-container{
+        display: flex;
+        padding: 10px;
+        
+    }
+    .input-container input[type="text"], input[type="password"], input[type="email"], input[type="number"]
+    {
+        border: none;
+        border-bottom: 5px solid #fff;
+        background-color:snow;
+        outline: none;
+        height: 64%;
+        width: 100%;
+        color: #000;
+        font-size: 16px;
+        padding-left: 10%;
+        padding-top: 3%;
+        border-bottom-right-radius:  10px;
+        border-top-right-radius: 10px;
+    }
+    .input-container input[type="Submit"]
+    {
+        border: 1;
+        width: 100%;
+        outline: none;
+        height: 50px;  
+        background:#0ddfb1;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 20px;
+    } 
+    .input-container input[type="Submit"]:hover
+    {
+        cursor: pointer;
+        background:#ffc107  ;
+        color: #000;
+    }
+    @media screen and (max-width: 650px) {
+  .signup{
+    margin: 12%;
+    width: 80%;
+    height: 55%;
+  }
+  .input-container input[type="text"], input[type="password"], input[type="email"], input[type="number"]
+  {
+    border: 10px solid #fff;
+    vertical-align: center;
+  }
+  .icon,.input-container input[type="submit"]{
+    border: 10px solid #0ddfb1 ;
+    vertical-align: middle;
+  }
+  .input-container p{
+    height: 10px;
+    font-size: large;
+  }
+  .avtar{
+    height: 40%;
+    width: 20%;
+    margin-left: 36%;
+    margin-top: -20%;
+  }
+}
+</style>
+<body>
+     <!-- Header -->
+  <header id="header" class="header">
+    <div class="navigation">
+      <div class="container">
+        <nav class="nav">
+          <div class="nav__hamburger">
+            <svg>
+              <use xlink:href="./images/sprite.svg#icon-menu"></use>
+            </svg>
+          </div>
+
+          <div class="nav__logo">
+            <a href="/" class="scroll-link">
+              PHONE
+            </a>
+          </div>
+
+          <div class="nav__menu">
+            <div class="menu__top">
+              <span class="nav__category">PHONE</span>
+              <a href="#" class="close__toggle">
+                <svg>
+                  <use xlink:href="./images/sprite.svg#icon-cross"></use>
+                </svg>
+              </a>
+            </div>
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="index.html#header" class="nav__link scroll-link">Home</a>
+              </li>
+              <li class="nav__item">
+                <a href="index.html#category" class="nav__link scroll-link">Category</a>
+              </li>
+              <li class="nav__item">
+                <a href="index.html#news" class="nav__link scroll-link">Blog</a>
+              </li>
+              <li class="nav__item">
+                <a href="index.html#contact" class="nav__link scroll-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="nav__icons">
+            <a href="login.html" class="icon__item">
+              <svg class="icon__user">
+                <use xlink:href="./images/sprite.svg#icon-user"></use>
+              </svg>
+            </a>    
+            
+              <a href="signin.html" class="icon__item" >
+                <svg class="icon__user">
+                  <use xlink:href="./images/sprite.svg#icon-plus" ></use>
+                </svg>
+              </a>
+
+            <a href="#" class="icon__item">
+              <svg class="icon__search">
+                <use xlink:href="./images/sprite.svg#icon-search"></use>
+              </svg>
+            </a>
+
+            <a href="cart.html" class="icon__item">
+              <svg class="icon__cart">
+                <use xlink:href="./images/sprite.svg#icon-shopping-basket"></use>
+              </svg>
+              <span id="cart__total">0</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </div>
+    </header>
+
+    <!-- signup form -->
+    <div class="signup-body">
+    <div class="signup">
+        <form onsubmit="SubmitAlert(this)" >
+              <div class="input-container">
+                <img src="./images/avtar.png"  class="avtar">
+            </div>
+            <div class="input-container">
+                <p>Sign In</p>
+            </div>
+            <div class="input-container">
+                <i class="fa fa-user icon"></i>
+                <input type="text" name="" placeholder="Name" spellcheck="false" required>
+            </div>
+            <div class="input-container">
+                <i class="fa fa-user icon"></i>
+                <input type="text" name=""  placeholder="Username" required>
+            </div>
+            <div class="input-container">
+                <i class="fa fa-phone icon"></i>
+                <input type="number" maxlength="10" name="" placeholder="Phone" required>
+            </div>
+            <div class="input-container">
+                <i class="fa fa-envelope icon"></i>
+                <input type="email" name=""  placeholder="Email" required>
+            </div>
+            <div class="input-container">
+                <i class="fa fa-key icon"></i>
+                <input type="password" name="password1"  value=""placeholder="Password"required>  
+            </div>
+            <div class="input-container">
+                <i class="fa fa-key icon"></i>
+                <input type="password" name="password2" value="" placeholder="Confirm Password" required>
+            </div>
+            <div class="input-container">
+                <input type="submit" value="SIGN UP">
+            </div>
+            
+        </form>
+    </div>
+</div>
+<!-- custom javascript -->
+<script src="./js/signin.js"></script>
+</body>
+</html>

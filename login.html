@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Login</title>
+</head>
+<style>
+
+    /*Internal CSS added for the Login form */
+    html,body{
+      height: 100%;
+      width: 100%;
+    }
+    .input-container p{
+      color:#fff;
+      width: 100%;
+      text-align: center;
+      font-size: xx-large;
+      font-weight: bold;       
+    }
+    .login_body{
+        background-image: url(./images/Colour6.jpg);
+        height: 100%;
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+    }
+    .icon{
+        padding: 13px;
+        height: 64%;
+        background: #0ddfb1;
+        color: white;
+        width: 15%;
+        text-align: center;
+        border-bottom-left-radius:  10px;
+        border-top-left-radius: 10px;
+    }
+    .input-container{
+        display: flex;
+    }
+    .loginbox{
+        background-color: rgba(0,0,0,0.3);
+        width: 30%;
+        height: 65%;
+        margin-left: 35%;
+        margin-top: 6%;
+        margin-bottom: 10%;
+        padding: 5% 2%;
+        border-radius: 5%;
+        border: 2px solid rgb(256, 256, 256,0.3);
+    }
+    .avtar{
+        width: 30%;
+        height: 40%;
+        margin-left: 35%;
+        margin-top: -35%;
+    }
+    .loginbox p{
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+        font-size: 30px;
+    }
+    .loginbox input{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .input-container input[type="text"], input[type="password"]
+    {
+        border: none;
+        background-color:snow;
+        outline: none;
+        height: 64%;
+        color: #000;
+        font-size:large;
+        padding-left: 3%;
+        padding-top: 3%;
+        border: 5px solid #fff;
+        border-bottom-right-radius:  10px;
+        border-top-right-radius: 10px;
+    }
+    .loginbox input[type="Submit"]
+    {
+        border: 1;
+        outline: none;
+        height: 50px;  
+        background:#0ddfb1;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 20px;
+    } 
+    .loginbox input[type="Submit"]:hover
+    {
+        cursor: pointer;
+        background:#ffc107  ;
+        color: #000;
+    }
+    .loginbox a{
+        text-decoration: none;
+        font-size: 15px;
+        line-height: 20px;
+        color:rgba(256,256,256,0.6);
+    }
+    .loginbox a:hover
+    {
+        color: #ffc107;
+    } 
+    @media screen and (max-width: 650px)
+    {
+      .loginbox{
+        margin: 12%;
+        width: 72%;
+        height: 60%;
+      }
+      .input-container input[type="text"], input[type="password"]
+      {
+        height: 60%;
+        border:8px solid #fff ;
+      }
+      .icon,.input-container input[type="submit"]{
+        height: 25%;
+        width: 20%;
+      }
+      .input-container p{
+      height: 10px;
+      font-size: large;
+      }
+      .avtar{
+        height: 40%;
+        width: 20%;
+        margin-left: 36%;
+        margin-top: -20%;
+        }
+    }
+    
+    </style>
+<body>
+    
+  <!-- Header -->
+  <header id="header" class="header">
+    <div class="navigation">
+      <div class="container">
+        <nav class="nav">
+          <div class="nav__hamburger">
+            <svg>
+              <use xlink:href="./images/sprite.svg#icon-menu"></use>
+            </svg>
+          </div>
+
+          <div class="nav__logo">
+            <a href="/" class="scroll-link">
+              PHONE
+            </a>
+          </div>
+
+          <div class="nav__menu">
+            <div class="menu__top">
+              <span class="nav__category">PHONE</span>
+              <a href="#" class="close__toggle">
+                <svg>
+                  <use xlink:href="./images/sprite.svg#icon-cross"></use>
+                </svg>
+              </a>
+            </div>
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="index.html#header" class="nav__link scroll-link">Home</a>
+              </li>
+              <li class="nav__item">
+                <a href="index.html#category" class="nav__link scroll-link">Category</a>
+              </li>
+              <li class="nav__item">
+                <a href="index.html#news" class="nav__link scroll-link">Blog</a>
+              </li>
+              <li class="nav__item">
+                <a href="index.html#contact" class="nav__link scroll-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="nav__icons">
+            <a href="login.html" class="icon__item">
+              <svg class="icon__user">
+                <use xlink:href="./images/sprite.svg#icon-user"></use>
+              </svg>
+            </a>    
+              <!--Plus icon added to link signup form-->
+              <a href="signin.html" class="icon__item" >
+                <svg class="icon__user">
+                  <use xlink:href="./images/sprite.svg#icon-plus" ></use>
+                  
+                </svg>
+              </a>
+
+            <a href="#" class="icon__item">
+              <svg class="icon__search">
+                <use xlink:href="./images/sprite.svg#icon-search"></use>
+              </svg>
+            </a>
+
+            <a href="#" class="icon__item">
+              <svg class="icon__cart">
+                <use xlink:href="./images/sprite.svg#icon-shopping-basket"></use>
+              </svg>
+              <span id="cart__total">0</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </div>
+    </header>
+
+    <!-- Login form-->
+    <div class="login_body">
+    <div class="loginbox">
+            <form method="get" action="index.html" style="width: 100%;max-width: 500px;">
+                <div class="input-container">
+                    <img src="./images/avtar.png"  class="avtar">
+                </div>
+                <div class="input-container">
+                  <p>Login</p>
+              </div>
+              <br>
+                <div class="input-container">
+                <i class="fa fa-user icon"></i>
+                <input type="text" name="" placeholder="Username" spellcheck="false" required>
+                </div>
+
+                <div class="input-container">
+                <i class="fa fa-key icon"></i>
+                <input type="Password" name="" placeholder="Password" required>
+                </div>
+                            
+                <br>
+                <input type="Submit" name="sub" value="LOGIN">
+                                
+                <p><a href="#" onclick="new_password()">FOGET PASSWORD?</a></p>
+                <p><a href="signin.html">DON'T HAVE AN ACCOUNT?</a></p>
+            </form>
+        </div>
+        </div>
+<!--custom javscript-->
+<script src="./js/login.js"></script>
+</body>
+</html>
