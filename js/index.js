@@ -39,7 +39,7 @@ if (popup) {
   window.addEventListener("load", () => {
     setTimeout(() => {
       popup.classList.remove("hide__popup");
-    }, 500);
+    }, 1000);
   });
 }
 
